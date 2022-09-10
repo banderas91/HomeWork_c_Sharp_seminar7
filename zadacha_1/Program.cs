@@ -18,17 +18,14 @@ Console.Write("Введите количество строк: ");
 Console.BackgroundColor = ConsoleColor.DarkCyan;
 Console.WriteLine(" массив ====>" );
 
-
-// Объявляем двумерный массив
         
-            Random ran = new Random();
-      // Инициализируем данный массив
-         for (int i = 0; i < m; i++)
-         {
-            for (int j = 0; j < n; j++)
-            {
-               array[i, j] = ran.NextDouble() + ran.Next(1, 15);
-               Console.Write("{0,6:F2}", array[i, j]);
-            }
-           Console.WriteLine();
-         }
+Random ran = new Random();
+for (int i = 0; i < m; i++)
+{
+     for (int j = 0; j < n; j++)
+    {
+     array[i, j] = ran.NextDouble() + ran.Next(1, 15);
+     Console.Write("{0,6:F2}", array[i, j]);
+    }
+    Console.WriteLine();
+}
