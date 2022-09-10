@@ -1,4 +1,5 @@
 ﻿/*Задача 52. Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
 */
 
 Console.Write("Введите количество строк: ");
@@ -21,19 +22,18 @@ for (int i = 0; i < m; i++)
     }
     Console.WriteLine();
 }
-
-
 Console.BackgroundColor = ConsoleColor.DarkGreen;
 Console.Write("Среднее арефметическое столбцов ====> ");
-double summ = 0;
-double ave = 0;
+
 for (int i = 0; i < array.GetLength(1); i++)
 {
+    double ave = 0;
+    double summ = 0;
     for (int j = 0; j < array.GetLength(0); j++)
     {
         summ = summ + array[j, i];
-        ave = (summ / n);
+        
     }
-    
-    Console.WriteL( ave + "; ");
+    ave = (summ / m);
+    Console.Write( Math.Round(ave,2) + "; ");
 }
